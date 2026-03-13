@@ -26,7 +26,7 @@ class FloweringPlant(Plant):
 
     def plant_message(self) -> str:
         bloom_msg: str = "blooming"
-        if not self.bloom:
+        if not self.blooming:
             bloom_msg = "not " + bloom_msg
         msg: str = f", {self.color} flowers ({bloom_msg})"
         return super().plant_message() + msg
