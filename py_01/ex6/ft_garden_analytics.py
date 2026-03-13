@@ -21,14 +21,15 @@ class FloweringPlant(Plant):
         self.color = color
         self.blooming = False
 
-    def bloom(self):
+    def bloom(self) -> None:
         self.blooming = True
 
     def plant_message(self) -> str:
         bloom_msg: str = "blooming"
         if not self.bloom:
             bloom_msg = "not " + bloom_msg
-        return super().plant_message() + f", {self.color} flowers ({bloom_msg})"
+        msg: str = f", {self.color} flowers ({bloom_msg})"
+        return super().plant_message() + msg
 
 
 class PrizeFlower(FloweringPlant):

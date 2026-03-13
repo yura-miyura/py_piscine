@@ -6,6 +6,7 @@ class Plant:
         self.cm = cm
         self.days = days
 
+
 def ft_plant_factory() -> None:
     plants = [Plant("rose", 25, 30)]
     counter = 0
@@ -16,8 +17,11 @@ def ft_plant_factory() -> None:
     print("=== Plant Factory Output ===")
     for plant in plants:
         counter += 1
-        print(f"Created: {plant.name.capitalize()} ({plant.cm}cm, {plant.days} days)")
+        print(f"Created: {
+              plant.name.capitalize()
+              } ({plant.cm}cm, {plant.days} days)")
     print(f"\nTotal plants created: {counter}")
+
 
 if __name__ == "__main__":
     ft_plant_factory()

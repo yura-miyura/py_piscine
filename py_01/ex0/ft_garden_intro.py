@@ -8,5 +8,6 @@ def ft_garden_info() -> None:
     print(f"Plant: {name}\nHeight: {height}cm\nAge: {age} days\n")
     print("=== End of Program ===")
 
+
 if __name__ == "__main__":
     ft_garden_info()

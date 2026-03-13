@@ -35,8 +35,9 @@ class Plant:
         self.__security_message(new_age, "age")
 
     def current_status(self) -> None:
-        print(f"Current plant: {self.name.capitalize()} ({self.__height}cm, {self.__age} days)")
-
+        print(f"Current plant: {
+              self.name.capitalize()
+              } ({self.__height}cm, {self.__age} days)")
 
 
 def ft_garden_security() -> None:
@@ -47,6 +48,6 @@ def ft_garden_security() -> None:
     plant.set_height(-5)
     plant.current_status()
 
+
 if __name__ == "__main__":
     ft_garden_security()
-
