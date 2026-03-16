@@ -30,8 +30,8 @@ def test_error_types() -> None:
         print(f"Testing {error}...")
         try:
             garden_operations(error)
-        except ValueError as e:
-            print(f"Caught ValueError: {e.__str__().split(" with base ")[0]}")
+        except ValueError:
+            print("Caught ValueError: invalid literal for int()")
         except ZeroDivisionError as e:
             print(f"Caught ZeroDivisionError: {e}")
         except FileNotFoundError as e:
