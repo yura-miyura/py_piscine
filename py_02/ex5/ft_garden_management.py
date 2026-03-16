@@ -5,14 +5,17 @@ class GardenError(Exception):
 
 
 class PlantError(GardenError):
+    """ Name is empty"""
     pass
 
 
 class WaterError(GardenError):
+    """ Too much or too little water"""
     pass
 
 
 class SunlightError(GardenError):
+    """ Too much or too litle sunlight"""
     pass
 
 
@@ -28,6 +31,7 @@ class Plant:
 
 
 class GardenManager:
+    """ Manages plants"""
     def __init__(self, water: int) -> None:
         self.tank_water = water
         self.garden = []

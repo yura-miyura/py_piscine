@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def water_plants(plant_list: list):
+def water_plants(plant_list: list) -> None:
     valid_plants: list[str] = ["tomato", "lettuce", "carrots"]
     try:
         for pl in plant_list:
