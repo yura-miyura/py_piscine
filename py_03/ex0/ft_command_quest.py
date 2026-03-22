@@ -15,8 +15,6 @@ def ft_command_quest() -> None:
     av: list = sys.argv
     ac: int = len(av)
     if (ac > 1):
-        if "42" in av:
-            av[0] = "\\_".join(av[0].split('_'))
         print(f"Program name: {av[0]}")
         print(f"Arguments received: {ac - 1}")
         print_args(ac - 1, av)

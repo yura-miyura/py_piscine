@@ -12,30 +12,26 @@ def add_scores(scores: list) -> list[int]:
             score_int = int(score)
             scores_int.append(score_int)
         except ValueError:
-            raise ValueError(f"oops, I typed ’{score}’ instead of ’1000’")
+            print(f"Invalid parameter: '{score}'")
     return scores_int
 
 
 def ft_score_analytics() -> None:
     print("=== Player Score Analytics ===")
-    try:
-        scores: list[int] = add_scores(argv)
-    except ValueError as e:
-        print(e)
+    scores: list[int] = add_scores(argv)
+    players: int = len(scores)
+    if players == 0:
+        print("No scores provided.",
+              "Usage: python3 ft_score_analytics.py",
+              "<score1> <score2> ...")
     else:
-        players: int = len(scores)
-        if players == 0:
-            print("No scores provided.",
-                  "Usage: python3 ft_score_analytics.py",
-                  "<score1> <score2> ...")
-        else:
-            print(f"Score processed: {scores}")
-            print(f"Total players: {players}")
-            print(f"Total score: {sum(scores)}")
-            print(f"Average score: {sum(scores) / players}")
-            print(f"High score: {max(scores)}")
-            print(f"Low score: {min(scores)}")
-            print(f"Score range: {max(scores) - min(scores)}")
+        print(f"Score processed: {scores}")
+        print(f"Total players: {players}")
+        print(f"Total score: {sum(scores)}")
+        print(f"Average score: {sum(scores) / players}")
+        print(f"High score: {max(scores)}")
+        print(f"Low score: {min(scores)}")
+        print(f"Score range: {max(scores) - min(scores)}")
     print()
 
 
