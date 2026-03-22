@@ -4,6 +4,9 @@ from sys import argv
 
 
 def add_scores(scores: list) -> list[int]:
+    """
+    Creates list of input score arguments converted to int
+    """
     scores.pop(0)
     scores_int: list[int] = []
     score_int: int

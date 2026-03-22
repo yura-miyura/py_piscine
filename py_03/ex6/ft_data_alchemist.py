@@ -4,6 +4,7 @@ import random
 
 
 def ft_data_alchemist() -> None:
+    """ main function to practice comprehensions """
     names: list[str] = ['Alice',
                         'bob',
                         'Charlie',

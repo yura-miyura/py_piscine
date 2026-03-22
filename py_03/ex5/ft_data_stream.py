@@ -10,6 +10,10 @@ def gen_event(names: list[str], actions: list[str]) -> Generator:
 
 
 def consume_event(events_list: list) -> Generator:
+    """
+    Generator that takes an event yield'
+    and continuing until it not empty
+    """
     while events_list:
         index: int = random.randrange(len(events_list))
         yield events_list.pop(index)

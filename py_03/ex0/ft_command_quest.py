@@ -4,6 +4,9 @@ import sys
 
 
 def print_args(ac: int, av: list) -> None:
+    """
+    prints all the outputs
+    """
     if ac == 0:
         return
     print_args(ac - 1, av)
@@ -11,6 +14,9 @@ def print_args(ac: int, av: list) -> None:
 
 
 def ft_command_quest() -> None:
+    """
+    main
+    """
     print("=== Command Quest ===")
     av: list = sys.argv
     ac: int = len(av)

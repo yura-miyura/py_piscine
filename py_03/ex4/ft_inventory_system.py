@@ -8,6 +8,9 @@ class InvalidParameterError(Exception):
 
 
 class Inventory:
+    """
+    inventory class with dictonary of quantity of items
+    """
     def __init__(self) -> None:
         self.inventory: dict[str, int] = {}
 
