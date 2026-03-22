@@ -9,9 +9,9 @@ def distance_calc(t1: tuple, t2: tuple) -> float:
     """
     x1, y1, z1 = t1
     x2, y2, z2 = t2
-    x_root: int = (x2 - x1) * (x2 - x1)
-    y_root: int = (y2 - y1) * (y2 - y1)
-    z_root: int = (z2 - z1) * (z2 - z1)
+    x_root: int = (x2 - x1) ** 2
+    y_root: int = (y2 - y1) ** 2
+    z_root: int = (z2 - z1) ** 2
     distance: float = sqrt(x_root + y_root + z_root)
     return (round(distance, 4))
 

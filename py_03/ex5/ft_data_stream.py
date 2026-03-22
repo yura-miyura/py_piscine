@@ -16,6 +16,7 @@ def consume_event(events_list: list) -> Generator:
 
 
 def ft_data_stream() -> None:
+    print("=== Game Data Stream Processor ===")
     names: list = ["bob", "alice", "dylan", "charlie"]
     actions: list = ["run", "eat", "sleep", "grab", "move", "climb", "swim"]
     for i in range(1000):
