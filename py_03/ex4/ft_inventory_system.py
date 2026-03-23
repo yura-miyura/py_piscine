@@ -24,7 +24,7 @@ class Inventory:
         print(f"Got inventory: {self.inventory}")
 
     def show_items(self) -> None:
-        print(f"Item list: {self.inventory.keys()}")
+        print(f"Item list: {[key for key in self.inventory.keys()]}")
 
     def inventory_stats(self) -> None:
         items: int = len(self.inventory)

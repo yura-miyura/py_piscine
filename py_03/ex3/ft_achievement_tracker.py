@@ -38,16 +38,18 @@ def ft_achievement_analytics(players: dict[str, set]) -> None:
     print()
     print(f"Common achievements: {first_set.intersection(*players.values())}")
     print()
+    cpy_players: dict[str, set]
+    cpy_player: set
     for key in players.keys():
-        cpy_players: dict[str, set] = players.copy()
-        cpy_player: set = players[key]
+        cpy_players = players.copy()
+        cpy_player = players[key]
         cpy_players.pop(key)
         print(f"Only {key.capitalize()} has: "
               f"{cpy_player.difference(*cpy_players.values())}")
     print()
     for key in players.keys():
-        cpy_players: dict[str, set] = players.copy()
-        cpy_player: set = players[key]
+        cpy_players = players.copy()
+        cpy_player = players[key]
         cpy_players.pop(key)
         print(f"{key.capitalize()} is missing: "
               f"{(first_set.union(*players.values())).difference(cpy_player)}")
