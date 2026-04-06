@@ -70,6 +70,7 @@ def quantity_convert(item: list) -> tuple[str, int]:
 
 def ft_inventory_system() -> None:
     input: list[str] = argv
+    input.pop(0)
     inventory: Inventory = Inventory()
     for item in input:
         try:
